@@ -32,7 +32,7 @@ layout = dbc.Col([
                 dbc.Card(
                     html.Div(className="fa fa-university", style=card_icon),
                     color="warning",
-                    style={"maxWidth":75, "heigth":100, "margin-left":"-10px"}
+                    style={"maxWidth":75, "height":100, "margin-left":"-10px"}
                 )
             ])
         ], width = 4),
@@ -49,7 +49,7 @@ layout = dbc.Col([
                 dbc.Card(
                     html.Div(className="fa fa-smile-o", style=card_icon),
                     color="success",
-                    style={"maxWidth":75, "heigth":100, "margin-left":"-10px"}
+                    style={"maxWidth":75, "height":100, "margin-left":"-10px"}
                 )
             ])
         ], width = 4),
@@ -66,7 +66,7 @@ layout = dbc.Col([
                 dbc.Card(
                     html.Div(className="fa fa-meh-o", style=card_icon),
                     color="danger",
-                    style={"maxWidth":75, "heigth":100, "margin-left":"-10px"}
+                    style={"maxWidth":75, "height":100, "margin-left":"-10px"}
                 )
             ])
         ], width = 4),
@@ -115,8 +115,18 @@ layout = dbc.Col([
                         id="date-picker-config",
                         style={"z-index":"100"}
                     ),
-            ], style={"heigth":"100%", "padding":"20px"})
-        ], width=4)
+            ], style={"height":"100%", "padding":"25px"})
+        ], width=4),
+
+        dbc.Col(
+            dbc.Card(dcc.Graph(id="graph1"), style={"height":"100%", "padding":"10px"}), width=8
+        )
+    ], style={"margin":"10px"}),
+
+    dbc.Row([
+        dbc.Col(dbc.Card(dcc.Graph(id="graph2"), style={"padding":"10px"}), width=6),
+        dbc.Col(dbc.Card(dcc.Graph(id="graph3"), style={"padding":"10px"}), width=3),
+        dbc.Col(dbc.Card(dcc.Graph(id="graph4"), style={"padding":"10px"}), width=3),
     ])
 ])
 
